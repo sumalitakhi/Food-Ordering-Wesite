@@ -1,0 +1,109 @@
+<div class="first">
+    <div class="container py-5 h-100 ">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration mt-5" style="border-radius: 15px; ">
+            <div class="card-body p-4 p-md-5">
+              <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h1>
+              <form [formGroup]="registerForm"(ngSubmit)="submit()">
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <input type="text" id="firstName" class="form-control form-control-lg" formControlName="firstName">
+                      <label class="form-label" for="firstName">First Name</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <input type="text" id="lastName" class="form-control form-control-lg" formControlName="lastName">
+                      <label class="form-label" for="lastName">Last Name</label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                    <div class="form-outline  w-100">
+                      <input type="date" class="form-control  form-control-lg" id="birthdayDate" formControlName="dob">
+                      <label for="birthdayDate" class="form-label">DOB</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <h6 class="mb-2 pb-1">Gender: </h6>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio"
+                        value="female"formControlName="gender"/>
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio"
+                        value="male" formControlName="gender"/>
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio"
+                        value="other" formControlName="gender"/>
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+
+                    <div class="form-outline">
+                      <input type="email" id="emailAddress" class="form-control form-control-lg"formControlName="email" />
+                      <label class="form-label" for="emailAddress">Email</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+
+                    <div class="form-outline">
+                      <input type="password" class="form-control form-control-lg"formControlName="password" />
+                      <label class="form-label">Password</label>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <div class="form-outline">
+                            <input type="number" class="form-control form-control-lg"formControlName="phone"/>
+                            <label class="form-label" >Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-outline">
+                            <input type="textarea" id="address" class="form-control  form-control-lg"formControlName="address"/>
+                            <label class="form-label" for="address">Address</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="mt-4 pt-2 text-center">
+                  <input class="btn  btn-lg" type="submit" value="Submit" />
+                  <input class="btn  btn-lg mx-4"(click)="clear()" type="submit" value="Clear" />
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

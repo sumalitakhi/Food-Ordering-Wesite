@@ -1,0 +1,23 @@
+
+h1{
+   
+    font-size: 42;
+    text-align: center;
+   
+}
+.btn{
+    background-color: rgb(214, 173, 134);
+    width: 30%;
+    margin-left: 62%;
+    font-size: 22px;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: rgb(255,184,48);
+}
+label{
+    font-size: 22px;
+}
+input{
+    font-size: 18px;
+}

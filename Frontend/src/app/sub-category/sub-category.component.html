@@ -1,0 +1,51 @@
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <div class="breadcrumb_iner_item">
+            <!-- <p>Home. Menu</p> -->
+            <h2>Choose Menu</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid">
+
+  <div class="row mt-5 mb-5">
+    <div class="col-md ms-5  " *ngFor="let i of categories">
+
+      <!-- <div class="card">
+        <div class="card__header">
+          <img [src]="getImgSrc(i.image)" height="200px" alt="">
+        </div>
+        <div class="card__body">
+
+          <h2>{{i.categoryName}}</h2>
+
+          <input class="btn btn col-md-12 mt-2" [routerLink]="['/userlayout/sub-category', i?._id]" type="submit"
+            value="View Menu">
+        </div>
+
+      </div> -->
+
+      <div class="card mb-5">
+        <div class="card__header">
+          <img [src]="getImgSrc(i.image)" height="200px" alt="">
+        </div>
+        <div class="card__body">
+
+          <h2>{{i.subCategoryName}}</h2>
+
+          <input class="btn btn col-md-12 mt-2" [routerLink]="['/userlayout/view-product', i?._id]" type="submit"
+            value="View Menu">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+
+.btn{
+   background-color: rgb(214, 173, 134);
+   width: 30%;
+   margin-left: 10%;
+   font-size: 22px;
+   font-weight: bold;
+}
+.btn:hover{
+   background-color: rgb(255,184,48);
+}
+h1{
+   text-align: center;
+}

@@ -1,0 +1,27 @@
+
+.table{
+    
+    text-align: center;
+    font-size: 22px;
+}
+
+.btn{
+    background-color: rgb(214, 173, 134);
+    width: 30%;
+    margin-left: 30%;
+    font-size: 22px;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: rgb(255,184,48);
+}
+th{
+
+    text-align: center;
+    background-color: rgb(214, 173, 134);
+
+}
+h1{
+    text-align: center;
+    font-size: 52px;
+}

@@ -1,0 +1,54 @@
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner">
+                    <div class="breadcrumb_iner_item">
+                        <!-- <p>Home. Menu</p> -->
+                        <h2>Attendance Table</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="food_menu">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="single-member">
+                <div class="row first">
+                    <div class=" col-md-9 offset-md-1 table-responsive  ">
+                        <h1>Attendance Table</h1>
+                        <ng-select [(ngModel)]="employeeId" (change)="getAttendence()">
+                          <ng-option value="">Choose Employee</ng-option>
+                          <ng-option *ngFor="let i of employees" [value]="i?._id">{{i.name}}</ng-option>
+                        </ng-select>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sr no.</th>
+                                    <th>Attendance</th>
+                                    <th>Date</th>
+                                    <th>Added On</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let i of attendenceData; let y = index">
+                                    <td>{{y+1}}</td>
+                                    <td>{{i?.attendance == "P" ? "Present" : "Absent"}}</td>
+                                    <td>{{i?.date | date}}</td>
+                                    <td>{{i?.createdAt | date}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- food menu part end-->

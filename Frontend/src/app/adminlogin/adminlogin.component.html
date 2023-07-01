@@ -1,0 +1,16 @@
+<div class="first">
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <h3>Login Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username" formControlName="email">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" formControlName="password">
+
+        <button type="submit" [disabled]="loginForm.invalid">Log In</button>
+        <a class="span mx-auto" routerLink="">Go To Home</a>
+
+    </form>
+</div>

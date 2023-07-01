@@ -1,0 +1,28 @@
+<div class="first">
+    <div class="wrapper">
+      <div class="logo">
+          <img src="https://th.bing.com/th/id/OIP.7a_bl9R55phwfbTW48B7gQAAAA?pid=ImgDet&w=200&h=200&rs=1" alt="">
+      </div>
+      <div class="text-center mt-4 name">
+          Login
+      </div>
+      <form class="p-3 mt-3"[formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="form-field d-flex align-items-center">
+              <span class="far fa-user"></span>
+              <input type="text" name="userEmail" placeholder="UserEmail"formControlName="email">
+          </div>
+          <div class="form-field d-flex align-items-center">
+              <span class="fas fa-key"></span>
+              <input type="password" name="password" id="pwd" placeholder="Password"formControlName="password">
+          </div>
+          <button class="btn mt-3" [disabled]="loginForm.invalid" type="submit">Login</button>
+    
+          <button class="btn mt-3" routerLink="/userregister">Sign up</button>
+          <!-- <button class="btn mt-3" routerLink="/userlayout/home">Go To Home</button> -->
+          <!-- <a routerLink="/userlayout/home">Back To Home</a> -->
+      </form>
+      <div class="text-center fs-6 ">
+         
+      </div>
+    </div>
+    </div>

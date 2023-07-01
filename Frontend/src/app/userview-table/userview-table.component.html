@@ -1,0 +1,36 @@
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <div class="breadcrumb_iner_item">
+            <!-- <p>Home. Menu</p> -->
+            <h2>Select Table</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="body">
+  
+  <div class="container">
+
+<div class="row">
+  <div class="col-md" *ngFor="let i of tables">  
+    <div class="card d-flex position-relative flex-column">
+    <div class='imgContainer'>
+      <img [src]="getImgSrc(i.image)" height="200px" alt="">
+        <input class="btn btn col-md-12 mt-2" [routerLink]="['/userlayout/table-reservation',i._id]" type="submit" value="Book Table">
+    </div>
+    <div class="content">
+        <h2>{{i.tableName}}</h2>
+        <h4>Seats:{{i.seats}}</h4>
+        <p>{{i.description}} </p>
+        
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>

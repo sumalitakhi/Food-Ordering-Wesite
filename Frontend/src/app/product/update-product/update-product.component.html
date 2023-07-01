@@ -1,0 +1,118 @@
+
+
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <div class="breadcrumb_iner_item">
+            <!-- <p>Home. Menu</p> -->
+            <h2>Update Product</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- breadcrumb start-->
+
+<!-- food menu part start-->
+<section class="food_menu">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="single-member">
+          <form [formGroup]="addForm" (ngSubmit)="submit()">
+            <div class="row">
+              <div class="col-sm-9 offset-md-1 table-bordered border-dark">
+                <h1> Update Product</h1>
+                <div class="row">
+                  <div class="col-md mt-4">
+                    <div class="row">
+                      <div class="col-md-2"><label> Name:</label>&nbsp;</div>
+                      <div class="col-md-9"><input type="text" formControlName="productName"
+                          class="form-control  offset-md-1"
+                          placeholder="Enter Product Name"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md ">
+                    <div class="row mt-4">
+                      <div class="col-md-2"><label>Image:</label>&nbsp;</div>
+                      <div class="col-md-9  ">
+
+                        <input type="file" class="form-control  offset-md-1" (change)="uploadimage($event)">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md mt-4">
+                    <div class="row">
+                      <div class="col-md-2"><label> Price:</label>&nbsp;</div>
+                      <div class="col-md-9"><input type="number" formControlName="price"
+                          class="form-control  offset-md-1"
+                          placeholder="Enter Product Price"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md mt-4">
+                    <div class="row">
+                      <div class="col-md-2"><label> Category:</label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <div class="col-md-9">
+                        <select class="form-control" formControlName="categoryId"
+                          (change)="getAllSubCategories()"
+                          ch>
+                          <option value disabled selected>Select Category</option>
+                          <option *ngFor="let i of categories" [value]="i?._id">
+                            {{i.categoryName}}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md mt-4">
+                    <div class="row">
+                      <div class="col-md-2"><label> Subcategory:</label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <div class="col-md-9">
+                        <select class="form-control"
+                          formControlName="subcategoryId" formControlName="subCategoryId"
+                          ch>
+                          <option value selected>Select SubCategory</option>
+                          <option *ngFor="let i of subcategories" [value]="i?._id">
+                            {{i.subCategoryName}}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md mt-4">
+                    <div class="row">
+                      <div class="col-md-2"><label>Description:</label>&nbsp;</div>
+                      <div class="col-md-9"> <textarea
+                          class="form-control offset-md-1" formControlName="description"
+                          placeholder="Add Description"></textarea></div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 mt-4 mb-4">
+                    <input class="btn mt-4 mb-5  form-control " type="submit"
+                      value="Submit">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- food menu part end-->

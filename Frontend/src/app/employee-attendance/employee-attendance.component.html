@@ -1,0 +1,74 @@
+<!-- breadcrumb start-->
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <div class="breadcrumb_iner_item">
+            <!-- <p>Home. Menu</p> -->
+            <h2>Mark Attendance</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- breadcrumb start-->
+
+<!-- food menu part start-->
+<section class="food_menu">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="single-member">
+          <div class="row">
+            <div class="col-sm-9 offset-1 table-responsive table-bordered border-dark  ">
+              <h1>Mark Attendance</h1>
+              <form [formGroup]="addForm" (ngSubmit)="submit()">
+                <div class="row mt-5">
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <ng-select formControlName="employeeId">
+                        <ng-option value="">Choose Employee</ng-option>
+                        <ng-option *ngFor="let i of employees" [value]="i?._id">{{i.name}}</ng-option>
+                      </ng-select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <input type="date" class="form-control"
+                        formControlName="date">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <span>Mark:</span> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <input type="radio" value="P"
+                        formControlName="attendance">
+                      <label>Present</label>&nbsp;&nbsp;
+                      <input type="radio" value="A"
+                        formControlName="attendance">
+                      <label>Absent</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <input class="btn " type="submit"
+                        value="Mark Attendance" />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- food menu part end-->

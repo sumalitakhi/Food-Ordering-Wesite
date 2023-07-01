@@ -1,0 +1,12 @@
+h2{
+    
+    font-size: 42px;
+}
+.contact{
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0c/48/05/2b/salt-pepper.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.table{
+    border: solid black .5px;
+}

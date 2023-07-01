@@ -1,0 +1,71 @@
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <div class="breadcrumb_iner_item">
+            <!-- <p>Home. Menu</p> -->
+            <h2>My Orders</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- breadcrumb start-->
+
+<!-- food menu part start-->
+<section class="food_menu">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+        <div class="single-member">
+          <div class="row  ">
+            <div class="col-md offset-md-1 ml-0 table-responsive ">
+              <h1>My Orders</h1>
+              <table class="table table-bordered ">
+                <thead>
+                  <tr>
+
+                    <th scope="col">Order_id</th>
+                    <!-- <th scope="col">Booked By</th> -->
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Payment Type</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of orders">
+                    <td><a [routerLink]="['/userlayout/order-detail',i._id]">{{i?.orderId}}</a></td>
+                    <!-- <td>{{i?.userId?.firstName}} {{i?.userId?.lastName}}</td>d -->
+                    <td>{{i?.name}}</td>
+                    <td>{{i?.contact}}</td>
+                    <td>{{i?.address}}</td>
+                    <td>{{i?.paymentType | titlecase}}</td>
+                    <td>{{i?.amount |currency :"INR"}}</td>
+                    <td *ngIf="i?.status == 'Pending'">
+                      <button class="btn btn-danger ml-0 p-0" (click)="checkStatus(i?._id, 'Canceled')"><i class="fa fa-trash"></i></button>
+                    </td>
+                    <td *ngIf="i?.status != 'Pending'">{{i?.status}}</td>
+                  </tr>
+                </tbody>
+
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- food menu part end-->
+
+
+
+
+
+s

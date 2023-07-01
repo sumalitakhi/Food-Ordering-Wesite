@@ -1,0 +1,82 @@
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-12 col-lg-11">
+			<div class="card card0 rounded-0">
+				<form [formGroup]="orderForm" (ngSubmit)="addOrder()">
+					<div class="row">
+						<div class="col">
+							<h1 class="head mt-3">Shipping Details</h1>
+							<div class="d-flex flex-column mt-5">
+								<p class="text mb-1">Shipping Name</p>
+								<input class="form-control mb-5" type="text" formControlName="name"
+									placeholder="Enter your Name">
+							</div>
+							<div class="d-flex flex-column">
+								<p class="text mb-1">Shipping Contact</p>
+								<input class="form-control mb-5" type="Number" formControlName="contact"
+									placeholder="Enter your Phone Number">
+							</div>
+							<div class="d-flex flex-column">
+								<p class="text mb-1">Shipping Address</p>
+								<input class="form-control mb-5" type="text" formControlName="address"
+									placeholder="Enter your Address">
+							</div>
+						</div>
+
+
+						<div class="col-md-7 col-sm-12 p-0 box">
+							<div class="card rounded-0 border-0 card2" id="paypage">
+								<div class="form-card">
+									<h2 id="heading2" class="text-danger">Payment Method</h2>
+									<div class="form-check form-check-inline">
+										<input class="my-auto" type="radio" value="cash"
+											formControlName="paymentType" />&nbsp;&nbsp;
+										<label class="form-check-label" for="femaleGender">Cash</label>
+									</div><br>
+
+									<div class="form-check form-check-inline">
+										<input class="my-auto" type="radio" value="online"
+											formControlName="paymentType" />&nbsp;&nbsp;
+										<label class="form-check-label" for="maleGender">Online</label>
+									</div><br>
+									<span *ngIf=" orderForm.value.paymentType == 'online'">
+										<label class="pay">Name on Card</label>
+										<input type="text" name="holdername" placeholder="Enter Your Name">
+										<div class="row">
+											<div class="col-8 col-md-6">
+												<label class="pay">Card Number</label>
+												<input type="text" name="cardno" id="cr_no"
+													placeholder="0000-0000-0000-0000" minlength="19" maxlength="19">
+											</div>
+											<div class="col-4 col-md-6">
+												<label class="pay">CVV</label>
+												<input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;"
+													class="placeicon" minlength="3" maxlength="3">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<label class="pay">Expiration Date</label>
+											</div>
+											<div class="col-md-12">
+												<input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5"
+													maxlength="5">
+											</div>
+										</div>
+
+									</span>
+									<div class="row">
+										<div class="col-md-6">
+											<input type="submit" value="MAKE A PAYMENT &nbsp; &#xf178;"
+												class="btn btn-info placeicon">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

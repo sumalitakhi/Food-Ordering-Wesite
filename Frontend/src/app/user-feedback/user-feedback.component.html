@@ -1,0 +1,70 @@
+ 
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner">
+                    <div class="breadcrumb_iner_item">
+                        <!-- <p>Home. Menu</p> -->
+                        <h2>Feedback</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- breadcrumb start-->
+  
+  <!-- food menu part start-->
+  <section class="food_menu">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="single-member">
+                <div class="row  ">
+                    <div class="col-md table-bordered border-dark  ">
+                        <h1>Feedback</h1>
+                       
+                          <form  [formGroup]="addForm" (ngSubmit)="submit()">
+                              <div class="mb-3 h5">
+                                <label for="email_addr">Email address</label>
+                                <input type="email"  class="form-control" 
+                                 name="email" placeholder="name@example.com" formControlName="email">
+                              </div>
+                              <div class="mb-3 h5">
+                                <label for="name_input">Name</label>
+                                <input type="text"  class="form-control" 
+                                formControlName="name" name="name" placeholder="Name">
+                              </div>            
+                              <div class="mb-3 h5">
+                                  <label for="phone_input">Phone</label>
+                                  <input type="number"  class="form-control" 
+                                  formControlName="phone" name="Phone" placeholder="Phone">
+                                </div> 
+                              <div class="mb-3 h5">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" formControlName="message" name="message" rows="3" placeholder="Description"></textarea>
+                              </div>
+  
+                              <button type="submit" class="btn  px-4 mb-4" >Send</button>
+                       
+                         </form>
+                        
+                        
+                    </div>
+                    <div class="col-md-4 img">
+                      
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- food menu part end-->
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,20 @@
+
+h1{
+    text-align: center;
+    font-size: 42px;
+   
+}
+
+.btn{
+    background-color: rgb(214, 173, 134);
+   
+}
+.btn:hover{
+    background-color: rgb(255,184,48);
+}
+.img{
+    background-image: url("https://images.pexels.com/photos/5953590/pexels-photo-5953590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    height: 520px;
+    background-size: cover;
+    margin-left: 3%;
+}

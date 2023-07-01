@@ -1,0 +1,84 @@
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <div class="breadcrumb_iner_item">
+            <!-- <p>Home. Menu</p> -->
+            <h2>Table Reservation</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- breadcrumb start-->
+
+<!-- food menu part start-->
+<section class="food_menu">
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-12">
+        <div class="single-member">
+          <div class="row  ">
+            <div class="col-md table-bordered border-dark">
+              <h1>Table Reservation</h1>
+              <form [formGroup]="addForm" (ngSubmit)="submit()">
+
+                <div class="row">
+                  <div class="col-md mb-4">
+
+                    <div class="form-outline h5">
+                      <input type="text" formControlName="name" class="form-control form-control-lg" />
+                      <label class="form-label" for="firstName">Name</label>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md mb-4 ">
+                    <div class="form-outline h5">
+                      <input type="Date" formControlName="date" class="form-control form-control-lg" />
+                      <label class="form-label">Date</label>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-md mb-4 ">
+                    <div class="form-outline h5">
+                      <input type="Time" formControlName="time" class="form-control form-control-lg" />
+                      <label class="form-label">Time</label>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-md">
+                    <div class="form-outline h5">
+                      <textarea class="form-control-lg form-control" formControlName="description"></textarea>
+                      <label class="form-label">Description</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4 pt-2 mb-4 mx-4 mb-4">
+                  <input class="btn  btn-lg" type="submit" value="Submit" />
+                  <input class="btn  btn-lg mx-4" type="submit" value="Clear" (click)="clear()" />
+                </div>
+
+              </form>
+
+            </div>
+            <div class=" col-md-5  img">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- food menu part end-->

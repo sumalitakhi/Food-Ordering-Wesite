@@ -1,0 +1,139 @@
+
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="breadcrumb_iner">
+                  <div class="breadcrumb_iner_item">
+                      <!-- <p>Home. Menu</p> -->
+                      <h2>Add Employee</h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- breadcrumb start-->
+
+<!-- food menu part start-->
+<section class="food_menu">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-lg-12">
+              <div class="single-member">
+              <div class="row">
+                  <div class="col-sm-9 offset-md-1 table-bordered border-dark">
+                    <h1> Add Employee </h1>
+                    <form [formGroup]="addForm" (ngSubmit)="submit()">
+          
+                        <div class="row mt-5">
+                          <div class="col-md-6 mb-4">
+          
+                            <div class="form-outline">
+                              <input type="text"  class="form-control form-control-lg" formControlName="name"/>
+                              <label class="form-label" > Name</label>
+                            </div>
+          
+                          </div>
+                          <div class="col-md-6 mb-4">
+          
+                            <div class="form-outline">
+                              <input type="email"  class="form-control form-control-lg" formControlName="email"/>
+                              <label class="form-label" >Email</label>
+                            </div>
+          
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+          
+                            <div class="form-outline  w-100">
+                              <input type="text" class="form-control form-control-lg"formControlName="address" />
+                              <label  class="form-label">Address</label>
+                            </div>
+          
+                          </div>
+                          <div class="col-md-6 mb-4">
+          
+                            <div class="form-outline">
+                              <input type="number"  class="form-control form-control-lg" formControlName="phone" />
+                              <label class="form-label" >Contact</label>
+                            </div>
+          
+                          </div>
+                        </div>
+          
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+          
+                            <h4 class="mb-2 pb-1">Gender: </h4>
+          
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" formControlName="gender"
+                                value="Female" />
+                              <label class="form-check-label" for="femaleGender">Female</label>
+                            </div>
+          
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" formControlName="gender"
+                                value="Male" />
+                              <label class="form-check-label" for="maleGender">Male</label>
+                            </div>
+          
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" id="otherGender" formControlName="gender"
+                                value="option3" />
+                              <label class="form-check-label" for="otherGender">Other</label>
+                            </div>
+          
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+          
+                            <div class="form-outline">
+                              <input type="date" formControlName="dateJoining" class="form-control form-control-lg" />
+                              <label class="form-label" for="emailAddress">Date of Joining</label>
+                            </div>
+          
+                          </div>
+                          
+                        </div>
+          
+                        <div class="row">
+                          <div class="col-md-6 ">
+                            <div class="form-outline">
+                                <input type="text" formControlName="designation"class="form-control form-control-lg"/>
+                                <label class="form-label">Designation</label>
+                            </div>
+                         </div>
+          
+                          
+                          <div class="col-md-6 mb-4 pb-2">
+          
+                            <div class="form-outline">
+                              <input type="text" formControlName="experience" class="form-control form-control-lg" />
+                              <label class="form-label" for="phoneNumber">Experience</label>
+                            </div>
+          
+                          </div>
+                        </div>
+                       
+          
+                       
+          
+                        <div class="mt-4 pt-2 mb-3">
+                          <input class="btn  btn-lg" type="submit" value="Submit" />
+                          <input class="btn  btn-lg mx-4"  value="Clear" (click)="clear()"  />
+                        </div>
+          
+                      </form>   
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- food menu part end-->
+
+
+
